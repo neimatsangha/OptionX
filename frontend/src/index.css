@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #000000, #111111, #222222);
+  --accent-color: #00ffaa;
+  --text-color: #ffffff;
+  --card-bg: rgba(30, 30, 30, 0.7);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+}
+
+.glassmorphism {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-white;
+}
+
+/* Material UI inspired styles */
+.mui-card {
+  @apply glassmorphism p-6;
+}
+
+.mui-button {
+  @apply px-4 py-2 rounded-full bg-accent text-background font-medium transition-all duration-300 ease-in-out;
+}
+
+.mui-button:hover {
+  @apply brightness-110;
+}
+
+.mui-input {
+  @apply bg-transparent border-b-2 border-gray-600 focus:border-accent transition-all duration-300 ease-in-out;
+}
+
+.mui-select {
+  @apply bg-transparent border-b-2 border-gray-600 focus:border-accent transition-all duration-300 ease-in-out;
+}
+
+/* Add more custom styles as needed */
